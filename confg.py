@@ -30,26 +30,17 @@ Format = "urn:example:sensor:temp"
 # choice of random letter
 letters = "ABCDEFGHIJKLMONPQRSTUVWXYZ"
 
-iotmsg_header = """\
-    {
-        "guid": "%s",
-        "destination": "%s",
-        "state": "%s", 
-"""
-
-iotmsg_eventTime = """\
-    "eventTime": "%sZ",
-"""
-
-iotmsg_payload = """\
-    "payload": {
+iot_msg = """\
+{
+     "guid": "%s",
+     "destination": "%s",
+     "state": "%s",
+     "evenTime": "%sZ",
+     "payload": {
         "format": "%s",
-"""
-
-iotmsg_data = """\
-        "data":{
-            "temperature": "%.1f
-            }
+        "data":{ 
+            "temperature": "%.1f"
         }
-    }   
+    }
+}
 """

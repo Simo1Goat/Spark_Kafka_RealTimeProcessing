@@ -4,6 +4,8 @@ $ ./iotsimulator.py
 """
 
 # import the necessar libraries
+import json
+import sys
 import re
 import datetime
 import random
@@ -11,12 +13,16 @@ from random import randrange
 import confg as cfg
 
 # set the number of simulated data to generate
-
+if len(sys.argv) > 1:
+    num_msgs = int(sys.argv[1])
+else:
+    num_msgs = 1
 
 # let's generate the JSON Output
 if __name__ == '__main__':
-    num_msgs = int(input("type the number of the msgs you want to generate \n"))
-    file = open("TempData.txt", "a")
+    # num_msgs = int(input("type the number of the msgs you want to generate \n"))
+    file = open("TempData.json", "w")
+    file.write("[\t\n")
     for counter in range(0, num_msgs):
         rand_num = str(randrange(0, 9)) + str(randrange(0, 9))
         rand_letter = random.choice(cfg.letters)
@@ -40,7 +46,14 @@ if __name__ == '__main__':
         # getting the eventTime
         today = datetime.datetime.today().isoformat()
 
-        print(re.sub(r"[\s+]", "", cfg.iotmsg_header) % (guid, cfg.destination, state)),
-        print(re.sub(r"[\s+]", "", cfg.iotmsg_eventTime) % today),
-        print(re.sub(r"[\s+]", "", cfg.iotmsg_payload) % cfg.Format),
-        print(re.sub(r"[\s+]", "", cfg.iotmsg_data) % cfg.current_temp[guid])
+        DataJson = re.sub(r"[\s+]", "", cfg.iot_msg) % (guid, cfg.destination, state,
+                                                        today, cfg.Format, cfg.current_temp[guid])
+        DataJson = json.loads(DataJson)
+        file.write(json.dumps(DataJson, indent=5))
+        if counter == num_msgs - 1:
+            continue
+        else:
+            file.write(",\n")
+
+    file.write("\n]")
+    file.close()
