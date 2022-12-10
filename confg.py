@@ -4,6 +4,8 @@
     * some fixed values
 """
 
+from pyspark.sql.types import *
+
 # mapping of guid and a state {guid: state}
 device_state_map = {}
 
@@ -44,3 +46,22 @@ iot_msg = """\
     }
 }
 """
+
+# PySpark Processing Phase
+topic_name = "IoT_Temperature_"
+bootstrap = "127.0.0.1:9091"
+auto_reset_offset = "earliest"
+
+
+mySchema = StructType([
+    StructField("guid", StringType(), True),
+    StructField("destination", StringType(), True),
+    StructField("state", StringType(), True),
+    StructField("eventTime", StringType(), True),
+    StructField("payload", StructType([
+        StructField("format", StringType(), True),
+        StructField("data", StructType([
+            StructField("temperature", StringType(), True)
+        ]))
+    ]))
+])
