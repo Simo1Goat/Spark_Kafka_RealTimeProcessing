@@ -26,6 +26,9 @@ if __name__ == '__main__':
                      ).alias("value")
     )
 
+    print("the schema of our data after deserializing it \n")
+    dataFrame.printSchema()
+
     selected_cols = dataFrame.select(fn.col("value.*")) \
         .select([fn.col("state"),
                  fn.col("payload.data.temperature").alias("temperature")

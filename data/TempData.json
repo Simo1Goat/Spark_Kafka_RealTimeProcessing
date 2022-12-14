@@ -1,0 +1,122 @@
+[	
+{
+     "guid": "0-ZZZ12345678-36N",
+     "destination": "0-AAA12345678",
+     "state": "NJ",
+     "evenTime": "2022-12-11T14:32:39.953471Z",
+     "payload": {
+          "format": "urn:example:sensor:temp",
+          "data": {
+               "temperature": "50.5"
+          }
+     }
+},
+{
+     "guid": "0-ZZZ12345678-86H",
+     "destination": "0-AAA12345678",
+     "state": "HI",
+     "evenTime": "2022-12-11T14:32:39.953471Z",
+     "payload": {
+          "format": "urn:example:sensor:temp",
+          "data": {
+               "temperature": "68.0"
+          }
+     }
+},
+{
+     "guid": "0-ZZZ12345678-45U",
+     "destination": "0-AAA12345678",
+     "state": "NE",
+     "evenTime": "2022-12-11T14:32:39.953471Z",
+     "payload": {
+          "format": "urn:example:sensor:temp",
+          "data": {
+               "temperature": "50.4"
+          }
+     }
+},
+{
+     "guid": "0-ZZZ12345678-43O",
+     "destination": "0-AAA12345678",
+     "state": "SC",
+     "evenTime": "2022-12-11T14:32:39.954464Z",
+     "payload": {
+          "format": "urn:example:sensor:temp",
+          "data": {
+               "temperature": "66.8"
+          }
+     }
+},
+{
+     "guid": "0-ZZZ12345678-66L",
+     "destination": "0-AAA12345678",
+     "state": "MD",
+     "evenTime": "2022-12-11T14:32:39.954464Z",
+     "payload": {
+          "format": "urn:example:sensor:temp",
+          "data": {
+               "temperature": "53.1"
+          }
+     }
+},
+{
+     "guid": "0-ZZZ12345678-64Y",
+     "destination": "0-AAA12345678",
+     "state": "DC",
+     "evenTime": "2022-12-11T14:32:39.954464Z",
+     "payload": {
+          "format": "urn:example:sensor:temp",
+          "data": {
+               "temperature": "60.8"
+          }
+     }
+},
+{
+     "guid": "0-ZZZ12345678-46Q",
+     "destination": "0-AAA12345678",
+     "state": "OR",
+     "evenTime": "2022-12-11T14:32:39.954464Z",
+     "payload": {
+          "format": "urn:example:sensor:temp",
+          "data": {
+               "temperature": "51.0"
+          }
+     }
+},
+{
+     "guid": "0-ZZZ12345678-63C",
+     "destination": "0-AAA12345678",
+     "state": "NC",
+     "evenTime": "2022-12-11T14:32:39.954464Z",
+     "payload": {
+          "format": "urn:example:sensor:temp",
+          "data": {
+               "temperature": "55.2"
+          }
+     }
+},
+{
+     "guid": "0-ZZZ12345678-82W",
+     "destination": "0-AAA12345678",
+     "state": "CO",
+     "evenTime": "2022-12-11T14:32:39.955461Z",
+     "payload": {
+          "format": "urn:example:sensor:temp",
+          "data": {
+               "temperature": "45.9"
+          }
+     }
+},
+{
+     "guid": "0-ZZZ12345678-13H",
+     "destination": "0-AAA12345678",
+     "state": "OH",
+     "evenTime": "2022-12-11T14:32:39.955461Z",
+     "payload": {
+          "format": "urn:example:sensor:temp",
+          "data": {
+               "temperature": "50.4"
+          }
+     }
+}
+]

@@ -57,7 +57,7 @@ mySchema = StructType([
     StructField("guid", StringType(), True),
     StructField("destination", StringType(), True),
     StructField("state", StringType(), True),
-    StructField("eventTime", StringType(), True),
+    StructField("eventTime", TimestampType(), True),
     StructField("payload", StructType([
         StructField("format", StringType(), True),
         StructField("data", StructType([
@@ -65,3 +65,7 @@ mySchema = StructType([
         ]))
     ]))
 ])
+
+
+BASE_PATH = "C:\\Users\\pc\\Desktop\\iid3\\big_data\\IOT_Project\\data"
+WRITE_PATH = "/data/"
