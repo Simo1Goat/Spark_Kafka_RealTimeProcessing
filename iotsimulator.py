@@ -11,6 +11,7 @@ import datetime
 import random
 from random import randrange
 import confg as cfg
+import time
 
 # set the number of simulated data to generate
 if len(sys.argv) > 1:
@@ -50,6 +51,7 @@ def IotGenerator():
                                                          today, cfg.Format, cfg.current_temp[guid])
         data_json = json.loads(data_json)
         file.write(json.dumps(data_json, indent=5))
+        time.sleep(1)
         if counter == num_msgs - 1:
             continue
         else:
